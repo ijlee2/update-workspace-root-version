@@ -2,7 +2,7 @@
 
 # update-workspace-root-version
 
-_Codemod to [PROVIDE A SHORT DESCRIPTION.]_
+_Update the workspace root version in a monorepo_
 
 
 ## Usage
