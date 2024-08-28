@@ -4,21 +4,54 @@
 
 _Update the workspace root version in a monorepo_
 
+1. [Why use it?](#why-use-it)
+1. [Usage](#usage)
+    - [Arguments](#arguments)
+    - [Limitations](#limitations)
+1. [Compatibility](#compatibility)
+1. [Contributing](#contributing)
+1. [License](#license)
+
+
+## Why use it?
+
+A release tag helps us easily see the project at a past point in time. Naming the release tag can be tricky in a monorepo, because we can release many packages at once.
+
+We can solve the naming problem if the workspace root version represents the state of the project: We simply set the tag name to be the workspace root version.
+
 
 ## Usage
 
-### Arguments
+At the workspace root, install `update-workspace-root-version` as a development dependency. Run the codemod after updating the package versions.
 
-[PROVIDE REQUIRED AND OPTIONAL ARGUMENTS.]
+For example, with [changesets](https://github.com/changesets/changesets),
+
+```json5
+/* package.json */
+{
+  "scripts": {
+    "release:changelog": "changeset version; update-workspace-root-version",
+  },
+  "devDependencies": {
+    "@changesets/cli": "...",
+    "update-workspace-root-version": "..."
+  }
+}
+```
+
+
+### Arguments
 
 <details>
 
-<summary>Optional: Specify the project root</summary>
-
-Pass `--root` to run the codemod somewhere else (i.e. not in the current directory).
+<summary>Optional: Specify the algorithm</summary>
 
 ```sh
-npx update-workspace-root-version --root <path/to/your/project>
+# Highest version (default)
+update-workspace-root-version --algorithm highest-version
+
+# Increment by one
+update-workspace-root-version --algorithm increment-by-one
 ```
 
 </details>
