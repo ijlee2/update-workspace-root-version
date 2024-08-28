@@ -1,0 +1,71 @@
+{
+  "name": "update-workspace-root-version",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Use highest version formula to update the version",
+  "keywords": ["codemod", "workspace"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ijlee2/update-workspace-root-version.git"
+  },
+  "license": "MIT",
+  "author": "Isaac J. Lee",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "bin": "dist/bin/update-workspace-root-version.js",
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "./build.sh --production",
+    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
+    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint:js": "eslint . --cache",
+    "lint:js:fix": "eslint . --fix",
+    "lint:types": "tsc --noEmit",
+    "prepare": "pnpm build",
+    "release:changelog": "changeset version",
+    "release:publish": "pnpm build && changeset publish",
+    "test": "./build.sh --test && mt dist-for-testing --quiet"
+  },
+  "dependencies": {
+    "@codemod-utils/files": "^2.0.4",
+    "@codemod-utils/json": "^1.1.9",
+    "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@changesets/cli": "^2.27.7",
+    "@changesets/get-github-info": "^0.6.0",
+    "@codemod-utils/tests": "^1.1.7",
+    "@sondr3/minitest": "^0.1.2",
+    "@tsconfig/node18": "^18.2.4",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/node": "^18.19.47",
+    "@types/yargs": "^17.0.33",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^17.10.2",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-simple-import-sort": "^12.1.1",
+    "eslint-plugin-typescript-sort-keys": "^3.2.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "engines": {
+    "node": "18.* || >= 20"
+  },
+  "pnpm": {
+    "overrides": {
+      "eslint-plugin-import@2.29.1>tsconfig-paths": "^4.2.0"
+    }
+  }
+}
