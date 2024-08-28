@@ -1,6 +1,6 @@
 import {
   createOptions,
-  getHighestVersion,
+  getNewVersion,
   getPackageVersions,
   getWorkspaceRootVersion,
   updateWorkspaceRootVersion,
@@ -12,10 +12,7 @@ export function runCodemod(codemodOptions: CodemodOptions): void {
 
   const packageVersions = getPackageVersions(options);
   const workspaceRootVersion = getWorkspaceRootVersion(options);
-  const highestVersion = getHighestVersion(
-    packageVersions,
-    workspaceRootVersion,
-  );
 
-  updateWorkspaceRootVersion(highestVersion, options);
+  const version = getNewVersion(packageVersions, workspaceRootVersion, options);
+  updateWorkspaceRootVersion(version, options);
 }

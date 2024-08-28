@@ -12,6 +12,11 @@ process.title = 'update-workspace-root-version';
 
 // Set codemod options
 const argv = yargs(hideBin(process.argv))
+  .option('algorithm', {
+    choices: ['highest-version', 'increment-by-one'] as const,
+    describe: 'How to update the workspace root version',
+    type: 'string',
+  })
   .option('root', {
     describe: 'Where to run the codemod',
     type: 'string',
@@ -19,6 +24,7 @@ const argv = yargs(hideBin(process.argv))
   .parseSync();
 
 const codemodOptions: CodemodOptions = {
+  algorithm: argv['algorithm'] ?? 'highest-version',
   projectRoot: argv['root'] ?? process.cwd(),
 };
 
