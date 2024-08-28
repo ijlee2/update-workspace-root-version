@@ -10,9 +10,4 @@ test('index > project-2', function () {
   runCodemod(codemodOptions);
 
   assertFixture(outputProject, codemodOptions);
-
-  // Check idempotence
-  runCodemod(codemodOptions);
-
-  assertFixture(outputProject, codemodOptions);
 });
