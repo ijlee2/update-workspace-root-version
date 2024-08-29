@@ -4,8 +4,8 @@ import { createOptions } from '../../../src/steps/index.js';
 import {
   codemodOptions,
   options,
-} from '../../helpers/shared-test-setups/project-4.js';
+} from '../../helpers/shared-test-setups/monorepo-highest-version-3.js';
 
-test('steps | create-options > project-4', function () {
+test('steps | create-options > monorepo (highest-version, 3)', function () {
   assert.deepStrictEqual(createOptions(codemodOptions), options);
 });

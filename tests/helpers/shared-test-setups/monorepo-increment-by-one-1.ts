@@ -1,13 +1,13 @@
 import type { CodemodOptions, Options } from '../../../src/types/index.js';
 
 const codemodOptions: CodemodOptions = {
-  algorithm: 'highest-version',
-  projectRoot: 'tmp/project-2',
+  algorithm: 'increment-by-one',
+  projectRoot: 'tmp/monorepo-increment-by-one-1',
 };
 
 const options: Options = {
-  algorithm: 'highest-version',
-  projectRoot: 'tmp/project-2',
+  algorithm: 'increment-by-one',
+  projectRoot: 'tmp/monorepo-increment-by-one-1',
 };
 
 export { codemodOptions, options };
