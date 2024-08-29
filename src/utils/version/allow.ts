@@ -1,4 +1,4 @@
-export function allowVersion(version: string | undefined): boolean {
+export function allow(version: string | undefined): boolean {
   if (!version) {
     return false;
   }

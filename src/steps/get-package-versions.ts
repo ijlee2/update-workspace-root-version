@@ -4,7 +4,7 @@ import { findFiles } from '@codemod-utils/files';
 import { readPackageJson } from '@codemod-utils/json';
 
 import { Options } from '../types/index.js';
-import { allowVersion } from '../utils/versions/allow-version.js';
+import { allow } from '../utils/version/index.js';
 
 function getPackageRoots(options: Options): string[] {
   const { projectRoot } = options;
@@ -35,5 +35,5 @@ export function getPackageVersions(options: Options): string[] {
 
       return packageJson['version'];
     })
-    .filter(allowVersion) as string[];
+    .filter(allow) as string[];
 }
