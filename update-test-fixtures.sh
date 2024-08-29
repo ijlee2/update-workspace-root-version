@@ -16,37 +16,37 @@
 pnpm build
 
 # Update fixtures
-rm -r "tests/fixtures/project-1/output"
-cp -r "tests/fixtures/project-1/input" "tests/fixtures/project-1/output"
+rm -r "tests/fixtures/monorepo-highest-version-1/output"
+cp -r "tests/fixtures/monorepo-highest-version-1/input" "tests/fixtures/monorepo-highest-version-1/output"
 
 ./dist/bin/update-workspace-root-version.js \
-  --root "tests/fixtures/project-1/output"
+  --root "tests/fixtures/monorepo-highest-version-1/output"
 
 # Update fixtures
-rm -r "tests/fixtures/project-2/output"
-cp -r "tests/fixtures/project-2/input" "tests/fixtures/project-2/output"
+rm -r "tests/fixtures/monorepo-highest-version-2/output"
+cp -r "tests/fixtures/monorepo-highest-version-2/input" "tests/fixtures/monorepo-highest-version-2/output"
 
 ./dist/bin/update-workspace-root-version.js \
-  --root "tests/fixtures/project-2/output"
+  --root "tests/fixtures/monorepo-highest-version-2/output"
 
 # Update fixtures
-rm -r "tests/fixtures/project-3/output"
-cp -r "tests/fixtures/project-3/input" "tests/fixtures/project-3/output"
+rm -r "tests/fixtures/monorepo-highest-version-3/output"
+cp -r "tests/fixtures/monorepo-highest-version-3/input" "tests/fixtures/monorepo-highest-version-3/output"
 
 ./dist/bin/update-workspace-root-version.js \
-  --root "tests/fixtures/project-3/output"
+  --root "tests/fixtures/monorepo-highest-version-3/output"
 
 # Update fixtures
-rm -r "tests/fixtures/project-4/output"
-cp -r "tests/fixtures/project-4/input" "tests/fixtures/project-4/output"
-
-./dist/bin/update-workspace-root-version.js \
-  --root "tests/fixtures/project-4/output"
-
-# Update fixtures
-rm -r "tests/fixtures/project-5/output"
-cp -r "tests/fixtures/project-5/input" "tests/fixtures/project-5/output"
+rm -r "tests/fixtures/monorepo-increment-by-one-1/output"
+cp -r "tests/fixtures/monorepo-increment-by-one-1/input" "tests/fixtures/monorepo-increment-by-one-1/output"
 
 ./dist/bin/update-workspace-root-version.js \
   --algorithm increment-by-one \
-  --root "tests/fixtures/project-5/output"
+  --root "tests/fixtures/monorepo-increment-by-one-1/output"
+
+# Update fixtures
+rm -r "tests/fixtures/not-monorepo/output"
+cp -r "tests/fixtures/not-monorepo/input" "tests/fixtures/not-monorepo/output"
+
+./dist/bin/update-workspace-root-version.js \
+  --root "tests/fixtures/not-monorepo/output"
