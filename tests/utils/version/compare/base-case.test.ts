@@ -1,6 +1,6 @@
 import { assert, test } from '@codemod-utils/tests';
 
-import { compare } from '../../../../src/utils/versions/index.js';
+import { compare } from '../../../../src/utils/version/index.js';
 
 test('utils | versions > compare (base case)', function () {
   assert.strictEqual(compare('0.0.0', '0.0.0'), 0);

@@ -37,12 +37,27 @@ cp -r "tests/fixtures/monorepo-highest-version-3/input" "tests/fixtures/monorepo
   --root "tests/fixtures/monorepo-highest-version-3/output"
 
 # Update fixtures
+rm -r "tests/fixtures/monorepo-highest-version-edge-case/output"
+cp -r "tests/fixtures/monorepo-highest-version-edge-case/input" "tests/fixtures/monorepo-highest-version-edge-case/output"
+
+./dist/bin/update-workspace-root-version.js \
+  --root "tests/fixtures/monorepo-highest-version-edge-case/output"
+
+# Update fixtures
 rm -r "tests/fixtures/monorepo-increment-by-one-1/output"
 cp -r "tests/fixtures/monorepo-increment-by-one-1/input" "tests/fixtures/monorepo-increment-by-one-1/output"
 
 ./dist/bin/update-workspace-root-version.js \
   --algorithm increment-by-one \
   --root "tests/fixtures/monorepo-increment-by-one-1/output"
+
+# Update fixtures
+rm -r "tests/fixtures/monorepo-increment-by-one-edge-case/output"
+cp -r "tests/fixtures/monorepo-increment-by-one-edge-case/input" "tests/fixtures/monorepo-increment-by-one-edge-case/output"
+
+./dist/bin/update-workspace-root-version.js \
+  --algorithm increment-by-one \
+  --root "tests/fixtures/monorepo-increment-by-one-edge-case/output"
 
 # Update fixtures
 rm -r "tests/fixtures/not-monorepo/output"

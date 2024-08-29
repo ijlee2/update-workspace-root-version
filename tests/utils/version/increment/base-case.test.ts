@@ -1,6 +1,6 @@
 import { assert, test } from '@codemod-utils/tests';
 
-import { increment } from '../../../../src/utils/versions/index.js';
+import { increment } from '../../../../src/utils/version/index.js';
 
 test('utils | versions > increment (base case)', function () {
   assert.strictEqual(increment('0.0.0'), '0.0.1');

@@ -1,5 +1,5 @@
 import { Options } from '../types/index.js';
-import { compare, increment } from '../utils/versions/index.js';
+import { compare, increment } from '../utils/version/index.js';
 
 export function getNewVersion(
   packageVersions: string[],
