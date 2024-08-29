@@ -7,5 +7,5 @@ export function getWorkspaceRootVersion(options: Options): string {
 
   const packageJson = readPackageJson({ projectRoot });
 
-  return packageJson['version']!;
+  return packageJson['version'] ?? '0.0.0';
 }
