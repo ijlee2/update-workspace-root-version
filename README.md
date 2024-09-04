@@ -15,9 +15,11 @@ _Update the workspace root version in a monorepo_
 
 ## Why use it?
 
-A release tag helps us easily see the project at a past point in time. Naming the release tag can be tricky in a monorepo, because we can release many packages at once.
+Git tags mark a specific point in a repo's history and are usually created before release. Thanks to these tags, we can easily send people links and point to specific code. We can also compare tags to see how files have changed.
 
-We can solve the naming problem if the workspace root version represents the state of the project: We simply set the tag name to be the workspace root version.
+Creating tags can be tricky in monorepos, because we can release many packages at once: How do we create just 1 tag (no matter how many packages) and give it a name that resembles a [semantic version](https://semver.org/)?
+
+Solution: We let the workspace root's version indicate the state of the whole project, then set the tag name to be this version. `update-workspace-root-version` helps you update the version automatically.
 
 
 ## Usage
@@ -59,19 +61,7 @@ update-workspace-root-version --algorithm increment-by-one
 
 ### Limitations
 
-The codemod is designed to cover typical cases. It is not designed to cover one-off cases.
-
-To better meet your needs, consider cloning the repo and running the codemod locally.
-
-```sh
-cd <path/to/cloned/repo>
-
-# Compile TypeScript
-pnpm build
-
-# Run codemod
-./dist/bin/update-workspace-root-version.js --root <path/to/your/project>
-```
+The codemod assumes that every package follows semantic versioning. It is designed to cover typical cases.
 
 
 ## Compatibility
