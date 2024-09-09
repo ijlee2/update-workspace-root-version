@@ -4,6 +4,7 @@
   "description": "Update the workspace root version in a monorepo",
   "keywords": [
     "codemod",
+    "semver",
     "versioning",
     "workspace"
   ],
