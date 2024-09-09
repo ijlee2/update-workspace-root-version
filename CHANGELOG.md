@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.0
+
+### Major Changes
+
+None.
+
+### Patch Changes
+
+- [#8](https://github.com/ijlee2/update-workspace-root-version/pull/8) Updated development dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#9](https://github.com/ijlee2/update-workspace-root-version/pull/9) Updated README and keywords ([@ijlee2](https://github.com/ijlee2))
+
 ## 0.3.1
 
 ### Patch Changes
