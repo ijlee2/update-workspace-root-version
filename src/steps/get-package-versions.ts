@@ -31,9 +31,13 @@ export function getPackageVersions(options: Options): string[] {
 
   return packageRoots
     .map((packageRoot) => {
-      const packageJson = readPackageJson({ projectRoot: packageRoot });
+      try {
+        const packageJson = readPackageJson({ projectRoot: packageRoot });
 
-      return packageJson['version'];
+        return packageJson['version'];
+      } catch {
+        return undefined;
+      }
     })
     .filter(allow) as string[];
 }
