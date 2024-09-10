@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1
+
+### Patch Changes
+
+- [#10](https://github.com/ijlee2/update-workspace-root-version/pull/10) Made getPackageVersions() resilient to package.json's that couldn't be parsed ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.0
 
 ### Major Changes
