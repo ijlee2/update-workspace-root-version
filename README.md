@@ -46,6 +46,8 @@ Then, run the codemod before you create a tag. For example, after [changesets](h
 
 <summary>Optional: Specify the algorithm</summary>
 
+Learn more about the algorithms at https://crunchingnumbers.live/2024/09/15/moving-mountains/.
+
 ```sh
 # Highest version (default)
 update-workspace-root-version --algorithm highest-version
