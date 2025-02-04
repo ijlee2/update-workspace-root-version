@@ -3,7 +3,7 @@ import { join } from 'node:path';
 
 import { readPackageJson } from '@codemod-utils/json';
 
-import { Options } from '../types/index.js';
+import type { Options } from '../types/index.js';
 
 export function updateWorkspaceRootVersion(
   version: string,

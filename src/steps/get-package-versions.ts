@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { findFiles } from '@codemod-utils/files';
 import { readPackageJson } from '@codemod-utils/json';
 
-import { Options } from '../types/index.js';
+import type { Options } from '../types/index.js';
 import { allow } from '../utils/version/index.js';
 
 function getPackageRoots(options: Options): string[] {
