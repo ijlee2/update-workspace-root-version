@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2
+
+### Patch Changes
+
+- [#12](https://github.com/ijlee2/update-workspace-root-version/pull/12) Updated eslint to v9 ([@ijlee2](https://github.com/ijlee2))
+- [#11](https://github.com/ijlee2/update-workspace-root-version/pull/11) Added link to Moving Mountains, to provide information about the algorithms ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.0.1
 
 ### Patch Changes

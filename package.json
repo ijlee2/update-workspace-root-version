@@ -1,6 +1,6 @@
 {
   "name": "update-workspace-root-version",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Update the workspace root version in a monorepo",
   "keywords": [
     "codemod",
@@ -25,13 +25,13 @@
   ],
   "scripts": {
     "build": "./build.sh --production",
-    "lint": "concurrently 'pnpm:lint:*(!fix)' --names 'lint:'",
-    "lint:fix": "concurrently 'pnpm:lint:*:fix' --names 'fix:'",
+    "lint": "concurrently \"pnpm:lint:*(!fix)\" --names \"lint:\"",
+    "lint:fix": "concurrently \"pnpm:lint:*:fix\" --names \"fix:\"",
     "lint:js": "eslint . --cache",
     "lint:js:fix": "eslint . --fix",
     "lint:types": "tsc --noEmit",
     "prepare": "pnpm build",
-    "release:changelog": "changeset version",
+    "release:prepare": "changeset version",
     "release:publish": "pnpm build && changeset publish",
     "test": "./build.sh --test && mt dist-for-testing --quiet"
   },
