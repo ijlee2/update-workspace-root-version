@@ -1,4 +1,4 @@
-import { Options } from '../types/index.js';
+import type { Options } from '../types/index.js';
 import { compare, increment } from '../utils/version/index.js';
 
 export function getNewVersion(
