@@ -30,7 +30,7 @@ Then, run the codemod before you create a tag. For example, after [changesets](h
 /* package.json */
 {
   "scripts": {
-    "release:changelog": "changeset version; update-workspace-root-version",
+    "release:prepare": "changeset version; update-workspace-root-version"
   },
   "devDependencies": {
     "@changesets/cli": "...",
