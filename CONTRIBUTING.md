@@ -14,7 +14,7 @@ Here are some guidelines to help you and everyone else.
 1. Fork and clone this repo.
 
     ```sh
-    git clone git@github.com:ijlee2/update-workspace-root-version.git
+    git clone git@github.com:<your-github-handle>/update-workspace-root-version.git
     ```
 
 1. Change directory.
@@ -83,19 +83,17 @@ Here are some guidelines to help you and everyone else.
 
 <summary>Publish package (for admins)</summary>
 
-1. Generate a [personal access token](https://github.com/settings/tokens/) in GitHub, with `repo` and `read:user` scopes enabled.
+1. Generate a [personal access token](https://github.com/settings/tokens/) in GitHub, with default values for scopes (none selected).
 
 1. Run the `release:prepare` script. This removes changesets, updates the package version (e.g. from `0.1.1` to `0.1.2`), and updates the `CHANGELOG`.
 
     ```sh
-    # From the workspace root
     GITHUB_TOKEN=<YOUR_PERSONAL_ACCESS_TOKEN> pnpm release:prepare
     ```
 
 1. Review the file changes. Commit them in a branch, then open a pull request to merge the changes to the `main` branch.
 
     ```sh
-    # From the workspace root
     git checkout -b tag-0.1.2
     git add .
     git commit -m "Tagged 0.1.2"
@@ -107,7 +105,6 @@ Here are some guidelines to help you and everyone else.
 1. Publish the package.
 
     ```sh
-    # From the workspace root
     pnpm release:publish
     ```
 
