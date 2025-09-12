@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.0.4
+
+### Patch Changes
+
+- [#23](https://github.com/ijlee2/update-workspace-root-version/pull/23) Updated @codemod-utils/\* ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.3
 
 ### Patch Changes
