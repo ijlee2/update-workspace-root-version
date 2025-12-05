@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.0
+
+### Minor Changes
+
+- [#26](https://github.com/ijlee2/update-workspace-root-version/pull/26) Supported Windows ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.6
 
 ### Patch Changes
