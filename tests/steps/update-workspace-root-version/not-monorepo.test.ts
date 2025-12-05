@@ -1,7 +1,7 @@
 import {
   assertFixture,
-  createFile,
   loadFixture,
+  normalizeFile,
   test,
 } from '@codemod-utils/tests';
 
@@ -20,7 +20,7 @@ test('steps | update-workspace-root-version > not monorepo', function () {
   assertFixture(
     {
       '.gitkeep': '',
-      'package.json': createFile([
+      'package.json': normalizeFile([
         `{`,
         `  "name": "a",`,
         `  "version": "0.4.1"`,
