@@ -1,7 +1,7 @@
 import {
   assertFixture,
-  createFile,
   loadFixture,
+  normalizeFile,
   test,
 } from '@codemod-utils/tests';
 
@@ -20,7 +20,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
   assertFixture(
     {
       '.gitkeep': '',
-      'package.json': createFile([
+      'package.json': normalizeFile([
         `{`,
         `  "name": "workspace-root",`,
         `  "version": "0.4.1",`,
@@ -30,7 +30,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
       ]),
       packages: {
         a: {
-          'package.json': createFile([
+          'package.json': normalizeFile([
             `{`,
             `  "name": "a",`,
             `  "version": "0.3.1"`,
@@ -39,7 +39,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
           ]),
         },
         b: {
-          'package.json': createFile([
+          'package.json': normalizeFile([
             `{`,
             `  "name": "b",`,
             `  "version": "0.4.0"`,
@@ -48,7 +48,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
           ]),
         },
         c: {
-          'package.json': createFile([
+          'package.json': normalizeFile([
             `{`,
             `  "name": "c",`,
             `  "version": "0.2.5"`,
@@ -57,7 +57,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
           ]),
         },
         d: {
-          'package.json': createFile([
+          'package.json': normalizeFile([
             `{`,
             `  "name": "d",`,
             `  "version": "0.3.4"`,
@@ -66,7 +66,7 @@ test('steps | update-workspace-root-version > monorepo', function () {
           ]),
         },
         e: {
-          'package.json': createFile([
+          'package.json': normalizeFile([
             `{`,
             `  "name": "e",`,
             `  "version": "0.2.0"`,
