@@ -1,4 +1,9 @@
-import { assertFixture, loadFixture, test } from '@codemod-utils/tests';
+import {
+  assertFixture,
+  createFile,
+  loadFixture,
+  test,
+} from '@codemod-utils/tests';
 
 import { updateWorkspaceRootVersion } from '../../../src/steps/index.js';
 import { inputProject } from '../../fixtures/not-monorepo/index.js';
@@ -15,7 +20,13 @@ test('steps | update-workspace-root-version > not monorepo', function () {
   assertFixture(
     {
       '.gitkeep': '',
-      'package.json': '{\n  "name": "a",\n  "version": "0.4.1"\n}\n',
+      'package.json': createFile([
+        `{`,
+        `  "name": "a",`,
+        `  "version": "0.4.1"`,
+        `}`,
+        ``,
+      ]),
     },
     codemodOptions,
   );
