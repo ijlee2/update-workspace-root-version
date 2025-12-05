@@ -1,4 +1,9 @@
-import { assertFixture, loadFixture, test } from '@codemod-utils/tests';
+import {
+  assertFixture,
+  createFile,
+  loadFixture,
+  test,
+} from '@codemod-utils/tests';
 
 import { updateWorkspaceRootVersion } from '../../../src/steps/index.js';
 import { inputProject } from '../../fixtures/monorepo-highest-version-1/index.js';
@@ -15,23 +20,59 @@ test('steps | update-workspace-root-version > monorepo', function () {
   assertFixture(
     {
       '.gitkeep': '',
-      'package.json':
-        '{\n  "name": "workspace-root",\n  "version": "0.4.1",\n  "private": true\n}\n',
+      'package.json': createFile([
+        `{`,
+        `  "name": "workspace-root",`,
+        `  "version": "0.4.1",`,
+        `  "private": true`,
+        `}`,
+        ``,
+      ]),
       packages: {
         a: {
-          'package.json': '{\n  "name": "a",\n  "version": "0.3.1"\n}\n',
+          'package.json': createFile([
+            `{`,
+            `  "name": "a",`,
+            `  "version": "0.3.1"`,
+            `}`,
+            ``,
+          ]),
         },
         b: {
-          'package.json': '{\n  "name": "b",\n  "version": "0.4.0"\n}\n',
+          'package.json': createFile([
+            `{`,
+            `  "name": "b",`,
+            `  "version": "0.4.0"`,
+            `}`,
+            ``,
+          ]),
         },
         c: {
-          'package.json': '{\n  "name": "c",\n  "version": "0.2.5"\n}\n',
+          'package.json': createFile([
+            `{`,
+            `  "name": "c",`,
+            `  "version": "0.2.5"`,
+            `}`,
+            ``,
+          ]),
         },
         d: {
-          'package.json': '{\n  "name": "d",\n  "version": "0.3.4"\n}\n',
+          'package.json': createFile([
+            `{`,
+            `  "name": "d",`,
+            `  "version": "0.3.4"`,
+            `}`,
+            ``,
+          ]),
         },
         e: {
-          'package.json': '{\n  "name": "e",\n  "version": "0.2.0"\n}\n',
+          'package.json': createFile([
+            `{`,
+            `  "name": "e",`,
+            `  "version": "0.2.0"`,
+            `}`,
+            ``,
+          ]),
         },
       },
     },
