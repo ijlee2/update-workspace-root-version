@@ -1,5 +1,11 @@
 # Changelog
 
+## 2.1.2
+
+### Patch Changes
+
+- [#28](https://github.com/ijlee2/update-workspace-root-version/pull/28) Downstreamed changes from @codemod-utils/cli@3.9.1 ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.1.1
 
 ### Patch Changes
