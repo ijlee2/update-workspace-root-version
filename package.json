@@ -17,9 +17,6 @@
   "type": "module",
   "main": "dist/src/index.js",
   "bin": "dist/bin/update-workspace-root-version.js",
-  "directories": {
-    "test": "tests"
-  },
   "files": [
     "dist"
   ],
