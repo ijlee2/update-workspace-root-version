@@ -1,4 +1,4 @@
-export function compare(version1: string, version2: string) {
+export function compare(version1: string, version2: string): -1 | 0 | 1 {
   const versions1 = version1.split('.');
   const versions2 = version2.split('.');
 
