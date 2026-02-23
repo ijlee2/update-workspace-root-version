@@ -66,7 +66,7 @@ The codemod assumes that every package follows semantic versioning. It is design
 
 ## Compatibility
 
-- Node.js v20 or above
+- Node.js v22 or above
 
 
 ## Contributing
