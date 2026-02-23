@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.0
+
+### Major Changes
+
+- [#32](https://github.com/ijlee2/update-workspace-root-version/pull/32) Dropped support for Node 20 ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.1.5
 
 ### Patch Changes
