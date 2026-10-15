@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.7
+
+### Patch Changes
+
+- [`6ade03f`](https://github.com/ijlee2/update-workspace-root-version/commit/6ade03fa19a418f4dbd36148c99f03a7f676a324) Updated dependencies (replaced eslint with oxlint) ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.0.6
 
 ### Patch Changes
