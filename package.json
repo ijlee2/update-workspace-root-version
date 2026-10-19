@@ -43,8 +43,8 @@
     "@changesets/cli": "^3.0.3",
     "@codemod-utils/tests": "^3.3.0",
     "@ijlee2-frontend-configs/changesets": "^3.0.3",
-    "@ijlee2-frontend-configs/oxlint-node": "^0.3.0",
-    "@ijlee2-frontend-configs/prettier": "^3.4.2",
+    "@ijlee2-frontend-configs/oxlint-node": "^0.3.1",
+    "@ijlee2-frontend-configs/prettier": "^3.4.3",
     "@ijlee2-frontend-configs/typescript": "^4.4.0",
     "@sondr3/minitest": "^0.1.2",
     "@types/node": "^22.20.5",
@@ -55,7 +55,7 @@
     "prettier": "^3.9.10",
     "typescript": "^6.0.3"
   },
-  "packageManager": "pnpm@12.11.2",
+  "packageManager": "pnpm@12.14.0",
   "engines": {
     "node": "22.* || >= 24"
   }
