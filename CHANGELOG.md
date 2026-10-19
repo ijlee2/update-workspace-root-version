@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.8
+
+### Patch Changes
+
+- [#48](https://github.com/ijlee2/update-workspace-root-version/pull/48) Introduced trusted publishing ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.0.7
 
 ### Patch Changes
