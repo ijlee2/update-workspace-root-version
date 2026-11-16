@@ -1,5 +1,11 @@
 # Changelog
 
+## 3.0.10
+
+### Patch Changes
+
+- [#51](https://github.com/ijlee2/update-workspace-root-version/pull/51) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.0.9
 
 ### Patch Changes

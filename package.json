@@ -1,6 +1,6 @@
 {
   "name": "update-workspace-root-version",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "Update the workspace root version in a monorepo",
   "keywords": [
     "codemod",
